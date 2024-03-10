@@ -7,7 +7,7 @@ import time
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from layers_1 import FullyConnectedLayer, ReLULayer, SoftmaxLossLayer
 
-MNIST_DIR = "mnist_data"
+MNIST_DIR = "nn\\mnist_data"
 TRAIN_DATA = "train-images-idx3-ubyte"
 TRAIN_LABEL = "train-labels-idx1-ubyte"
 TEST_DATA = "t10k-images-idx3-ubyte"
@@ -168,7 +168,7 @@ class MNIST_MLP(object):
 
 
 def build_mnist_mlp(param_dir='weight.npy'):
-    h1,h2,e=512,128,10
+    h1,h2,e=512,256,10
     mlp=MNIST_MLP(hidden1=h1,hidden2=h2,max_epoch=e)
     mlp.load_data()
     mlp.build_model()

@@ -176,7 +176,7 @@ class MNIST_MLP(object):
         accuracy = np.mean(pred_results == self.test_data[:,-1])
         print('Accuracy in test set: %f' % accuracy)
 
-HIDDEN1 = 512
+HIDDEN1 = 256
 HIDDEN2 = 128
 OUT = 10
 def run_mnist():
